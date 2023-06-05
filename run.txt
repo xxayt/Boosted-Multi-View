@@ -1,0 +1,9 @@
+python train.py --name src_ab --TwoClass --lr=0.05
+# baseline
+python baseline-concat.py --name baseline-concat --TwoClass --lr=0.0001
+python baseline-concat.py --name baseline-concat-cenhist --TwoClass --lr=0.05
+python baseline-concat.py --name baseline-concat-gabor --TwoClass --lr=0.05
+python baseline-decisionfusion.py --name baseline-decisionfusion --TwoClass --lr=0.05
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+tensorboard --logdir ./logs/[path of tensorboard file] --port=[eg:6008]
